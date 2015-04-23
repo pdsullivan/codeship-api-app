@@ -1,6 +1,11 @@
 /* Empty. Add your own CSS if you like */
 
-
+body {
+    font-weight: 200;
+}
+.light-weight {
+    font-weight: 100;
+}
 .build-success-item {
     border-right-color: #33CD5F;
     border-right-width: 12px;
@@ -8,4 +13,8 @@
 .build-error-item {
     border-right-color: #e42012;
     border-right-width: 12px;
+}
+.status-badge {
+    top: 74px !important;
+    right: 3px !important;
 }

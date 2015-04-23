@@ -12,20 +12,39 @@
         </div>
         <div class="list">
             <div class="item item-thumbnail-left"
+                 ng-click="viewModel.clickBuild($event,build)"
                  ng-class="viewModel.getBuildItemClass(build)"
                  ng-repeat="build in viewModel.project.builds">
                 <img ng-src="{{build.githubUser.avatar_url}}">
                 <p>
-                    Commit: {{build.github_username}}, {{build.message}}
+                    Commiter: <span class="dark">{{build.github_username}}</span>
+                    <br/>
+                    Message: <span class="dark">{{build.message}}</span>
                 </p>
                 <p>
-                    Build Status: {{build.status}}
+                    Branch: <span class="dark">{{build.branch}}</span>
                 </p>
-                <p>
-                    Branch: {{build.branch}}
-                </p>
+                <span class="badge status-badge" ng-class="viewModel.badgeClass(build)">
+                     {{build.status}}
+                </span>
             </div>
         </div>
     </ion-content>
+
+    <script id="build-popover.html" type="text/ng-template">
+        <ion-popover-view>
+            <ion-header-bar>
+                <h1 class="title">Build</h1>
+            </ion-header-bar>
+            <ion-content>
+                <div class="padding text-center">
+                    <button class="button button-positive button-outline"
+                            ng-click="restartBuildFromDetail()">
+                        <i class="icon ion-ios-refresh-empty"></i> Restart Build
+                    </button>
+                </div>
+            </ion-content>
+        </ion-popover-view>
+    </script>
 </ion-view>
 

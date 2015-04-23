@@ -7,13 +7,18 @@
 
     angular.module('app').controller('settingsController', [
         '$scope',
+        '$log',
         'localStorageService',
         settingsController]);
 
-    function settingsController($scope, localStorageService) {
+    function settingsController($scope,$log, localStorageService) {
         var viewModel = this;
 
 
+        $scope.$watch('viewModel.apiKey', function(key){
+            $log.debug('saving key');
+            localStorageService.saveApiKey(viewModel.apiKey);
+        });
         function loadData() {
             viewModel.apiKey = localStorageService.getApiKey();
         }
