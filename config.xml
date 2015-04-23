@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.pdsullivan.codeship" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>ShipStus</name>
+<widget id="com.pdsullivan.codeship" version="1.0"  ios-CFBundleVersion="0.0.2"  xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>CodeShip Console</name>
   <description>
-    ShipStus
-    </description>
+    CodeShip Console
+  </description>
   <author email="patrick@pdsullivan.com" href="http://pdsullivan.com/">
       Patrick Sullivan
-    </author>
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
