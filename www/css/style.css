@@ -1,1 +1,11 @@
 /* Empty. Add your own CSS if you like */
+
+
+.build-success-item {
+    border-right-color: #33CD5F;
+    border-right-width: 12px;
+}
+.build-error-item {
+    border-right-color: #e42012;
+    border-right-width: 12px;
+}

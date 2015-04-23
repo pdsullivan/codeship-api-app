@@ -1,11 +1,18 @@
 <ion-view title="Projects" ng-controller="projectsController as viewModel">
     <ion-content class="has-header"  has-bouncing="true" >
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="viewModel.doRefresh()"
+                pulling-icon="ion-ios-arrow-down">
+        </ion-refresher>
         <div class="list">
             <ion-item ng-repeat="project in viewModel.projects"
-                    ng-click="viewModel.clickProject(project)">
+                      class="item item-icon-right"
+                      ng-click="viewModel.clickProject(project)">
                 <p>
-                    Project {{project.repository_name}}
+                    {{project.repository_name}}
                 </p>
+                <i class="icon ion-ios-arrow-right dark"></i>
             </ion-item>
         </div>
     </ion-content>
