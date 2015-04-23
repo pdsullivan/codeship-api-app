@@ -16,7 +16,6 @@
     function projectsController($scope,$log,$state, localStorageService, projectService) {
         var viewModel = this;
         viewModel.title = 'Projects';
-        var apiKey = localStorageService.getApiKey();
 
         viewModel.clickProject = function(project) {
             $state.go('app.projectDetail', {project: angular.toJson(project)});
@@ -27,6 +26,7 @@
         };
 
         function loadData() {
+            viewModel.apiKey = localStorageService.getApiKey();
             projectService.getProjects()
                 .then(function(data){
                     viewModel.projects = data.projects;
@@ -37,7 +37,11 @@
                 });
         }
 
-        loadData();
+
+        $scope.$on('$ionicView.beforeEnter', function() {
+            loadData();
+        });
+
     }
 })();
 

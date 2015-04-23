@@ -5,6 +5,11 @@
                 on-refresh="viewModel.doRefresh()"
                 pulling-icon="ion-ios-arrow-down">
         </ion-refresher>
+        <div ng-if="!viewModel.apiKey || viewModel.apiKey == ''" class="padding text-center">
+            <h2 class="light-weight">
+                No API Key
+            </h2>
+        </div>
         <div class="list">
             <ion-item ng-repeat="project in viewModel.projects"
                       class="item item-icon-right"
