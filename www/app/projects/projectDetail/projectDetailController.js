@@ -79,8 +79,8 @@
         };
 
         function loadData() {
-            var project = angular.fromJson($stateParams.project);
-            projectService.getProject(project)
+            viewModel.project = angular.fromJson($stateParams.project);
+            projectService.getProject(viewModel.project)
                 .then(function(data){
                     $log.debug('project',data);
                     viewModel.project = data;

@@ -7,7 +7,7 @@
         </ion-refresher>
         <div class="padding text-center">
             <h3>
-                {{viewModel.project.repository_name}}
+                <i ng-if="viewModel.project.repository_provider == 'github'" class="icon ion-social-github"></i> {{viewModel.project.repository_name}}
             </h3>
         </div>
         <div class="list">
