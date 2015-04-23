@@ -6,17 +6,17 @@
                 pulling-icon="ion-ios-arrow-down">
         </ion-refresher>
         <div ng-if="!viewModel.apiKey || viewModel.apiKey == ''" class="padding text-center">
-            <h2 class="light-weight">
-                No API Key
-            </h2>
+            <p class="light-weight">
+                Please provide an API key on the settings page.
+            </p>
         </div>
         <div class="list">
             <ion-item ng-repeat="project in viewModel.projects"
                       class="item item-icon-right"
                       ng-click="viewModel.clickProject(project)">
-                <p>
+                <h2>
                     {{project.repository_name}}
-                </p>
+                </h2>
                 <i class="icon ion-ios-arrow-right dark"></i>
             </ion-item>
         </div>
