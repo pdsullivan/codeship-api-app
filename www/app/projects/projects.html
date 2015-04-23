@@ -12,8 +12,10 @@
         </div>
         <div class="list">
             <ion-item ng-repeat="project in viewModel.projects"
-                      class="item item-icon-right"
+                      ng-if="project.repository_name && project.repository_provider"
+                      class="item item-icon-left item-icon-right"
                       ng-click="viewModel.clickProject(project)">
+                <i ng-if="project.repository_provider == 'github'" class="icon ion-social-github positive"></i>
                 <h2>
                     {{project.repository_name}}
                 </h2>
