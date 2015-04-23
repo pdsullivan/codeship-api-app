@@ -1,0 +1,15 @@
+<ion-view title="Settings" ng-controller="settingsController as viewModel">
+    <ion-content class="has-header"  has-bouncing="true" >
+        <div class="padding">
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">API Key</span>
+                    <input type="text" ng-model="viewModel.apiKey" placeholder="Key">
+                </label>
+            </div>
+            <button ng-click="viewModel.saveApiKey()" class="button button-full button-positive">
+                Save Api Key
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

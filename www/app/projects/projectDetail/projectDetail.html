@@ -1,0 +1,24 @@
+<ion-view title="Project" ng-controller="projectDetailController as viewModel">
+    <ion-content class="has-header"  has-bouncing="true" >
+        <div class="padding text-center">
+            <h3>
+                {{viewModel.project.repository_name}}
+            </h3>
+        </div>
+        <div class="list">
+            <div class="item"
+                    ng-repeat="build in viewModel.project.builds">
+                <p>
+                    Commit: {{build.github_username}}, {{build.message}}
+                </p>
+                <p>
+                    Build Status: {{build.status}}
+                </p>
+                <p>
+                    Branch: {{build.branch}}
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+

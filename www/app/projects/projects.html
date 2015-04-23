@@ -1,0 +1,13 @@
+<ion-view title="Projects" ng-controller="projectsController as viewModel">
+    <ion-content class="has-header"  has-bouncing="true" >
+        <div class="list">
+            <ion-item ng-repeat="project in viewModel.projects"
+                    ng-click="viewModel.clickProject(project)">
+                <p>
+                    Project {{project.repository_name}}
+                </p>
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>
+
