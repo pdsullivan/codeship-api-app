@@ -1,32 +1,41 @@
 <ion-view title="Project" ng-controller="projectDetailController as viewModel">
-    <ion-content class="has-header"  has-bouncing="true" >
+    <ion-content class="has-header build-content"  has-bouncing="true">
         <ion-refresher
                 pulling-text="Pull to refresh..."
                 on-refresh="viewModel.doRefresh()"
                 pulling-icon="ion-ios-arrow-down">
         </ion-refresher>
         <div class="padding text-center">
-            <h3>
+            <h3 class="positive">
                 <i ng-if="viewModel.project.repository_provider == 'github'" class="icon ion-social-github"></i> {{viewModel.project.repository_name}}
             </h3>
         </div>
         <div class="list">
-            <div class="item item-thumbnail-left"
+            <div class="card build-item"
                  ng-click="viewModel.clickBuild($event,build)"
                  ng-class="viewModel.getBuildItemClass(build)"
                  ng-repeat="build in viewModel.project.builds">
-                <img ng-src="{{build.githubUser.avatar_url}}">
-                <p>
-                    Commiter: <span class="dark">{{build.github_username}}</span>
-                    <br/>
-                    Message: <span class="dark">{{build.message}}</span>
-                </p>
-                <p>
-                    Branch: <span class="dark">{{build.branch}}</span>
-                </p>
-                <span class="badge status-badge" ng-class="viewModel.badgeClass(build)">
-                     {{build.status}}
-                </span>
+                <div class="item item-thumbnail-left ">
+                    <img ng-src="{{build.githubUser.avatar_url}}">
+                    <p>
+                        <span class="dark">{{build.githubUser.github_username}}</span>
+                        <br/>
+                        <span class="dark">{{build.message}}</span>
+                    </p>
+                    <p>
+                        <span class="octicon octicon-git-branch"></span> <span class="dark">{{build.branch}}</span>
+                    </p>
+                    <span class="badge status-badge" ng-class="viewModel.badgeClass(build)">
+                         {{build.status}}
+                    </span>
+                </div>
+                <div class="item item-divider">
+                    <p class="dark">
+                        {{viewModel.getDateString(build)}}
+                        <br/>
+                        <i class="icon ion-ios-clock-outline"></i> Completed in {{viewModel.getBuildTime(build) | number:2}} minutes
+                    </p>
+                </div>
             </div>
         </div>
     </ion-content>

@@ -1,27 +1,27 @@
 <ion-view title="Projects" ng-controller="projectsController as viewModel">
-    <ion-content class="has-header"  has-bouncing="true" >
+    <ion-content class="has-header projects-page"  has-bouncing="true" >
         <ion-refresher
                 pulling-text="Pull to refresh..."
                 on-refresh="viewModel.doRefresh()"
                 pulling-icon="ion-ios-arrow-down">
         </ion-refresher>
         <div ng-if="!viewModel.apiKey || viewModel.apiKey == ''" class="padding text-center">
-            <p class="light-weight">
+            <p class="light-weight instructions">
                 Please provide an API key on the settings page.
             </p>
         </div>
-        <div class="list">
-            <ion-item ng-repeat="project in viewModel.projects"
-                      ng-if="project.repository_name && project.repository_provider"
-                      class="item item-icon-left item-icon-right"
-                      ng-click="viewModel.clickProject(project)">
-                <i ng-if="project.repository_provider == 'github'" class="icon ion-social-github positive"></i>
-                <h2>
-                    {{project.repository_name}}
-                </h2>
-                <i class="icon ion-ios-arrow-right dark"></i>
-            </ion-item>
-        </div>
+
+            <div collection-repeat="project in viewModel.projects"
+                 collection-item-width="'50%'"
+                 collection-item-height="'130px'"
+                 ng-click="viewModel.clickProject(project)">
+                <div class="item text-center wrap item-wrap project-item">
+                    <i ng-if="project.repository_provider == 'github'" class="icon ion-social-github positive"></i>
+                    <h2>
+                        {{project.repository_name}}
+                    </h2>
+                </div>
+            </div>
     </ion-content>
 </ion-view>
 

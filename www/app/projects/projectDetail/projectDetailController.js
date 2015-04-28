@@ -19,6 +19,8 @@
         var viewModel = this;
         viewModel.title = '';
 
+        //commit_id: "a4a17743ea251758e0ea183e469283b4c9a37dd8"
+
         viewModel.getGithubUserData = function () {
             angular.forEach(viewModel.project.builds, function(build) {
                 githubService.getUser(build.github_username)
@@ -30,6 +32,16 @@
 
                     });
             });
+        };
+
+        viewModel.getDateString = function (build) {
+            return moment(build.started_at).format("MM/DD/YY h:mm a");;
+        };
+
+        viewModel.getBuildTime = function (build) {
+            var a = moment(build.started_at);
+            var b = moment(build.finished_at);
+            return b.diff(a, 'minutes', true); // 1.5
         };
 
         viewModel.doRefresh = function() {
