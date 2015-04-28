@@ -1,26 +1,2 @@
 /* Empty. Add your own CSS if you like */
 
-body {
-    font-weight: 200 !important;
-}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: #000;
-    font-weight: 200;
-    font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
-    line-height: 1.2;
-}
-.light-weight {
-    font-weight: 100;
-}
-.build-success-item {
-    border-right-color: #33CD5F;
-    border-right-width: 12px;
-}
-.build-error-item {
-    border-right-color: #e42012;
-    border-right-width: 12px;
-}
-.status-badge {
-    top: 74px !important;
-    right: 3px !important;
-}
