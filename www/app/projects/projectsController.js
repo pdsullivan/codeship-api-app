@@ -37,7 +37,6 @@
                 });
         }
 
-
         $scope.$on('$ionicView.beforeEnter', function() {
             loadData();
         });

@@ -19,8 +19,6 @@
         var viewModel = this;
         viewModel.title = '';
 
-        //commit_id: "a4a17743ea251758e0ea183e469283b4c9a37dd8"
-
         viewModel.getGithubUserData = function () {
             angular.forEach(viewModel.project.builds, function(build) {
                 githubService.getUser(build.github_username)
@@ -102,6 +100,10 @@
                     $scope.$broadcast('scroll.refreshComplete');
                 });
         }
+
+        $scope.$on('$ionicView.beforeEnter', function() {
+            loadData();
+        });
 
         loadData();
     }

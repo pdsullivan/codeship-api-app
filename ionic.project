@@ -2,9 +2,17 @@
   "name": "ShipStus",
   "app_id": "",
   "proxies": [
-      {
-        "path": "/api",
-        "proxyUrl": "https://codeship.com/"
-      }
-    ]
+    {
+      "path": "/api",
+      "proxyUrl": "https://codeship.com/"
+    }
+  ],
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

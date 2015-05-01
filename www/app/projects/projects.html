@@ -10,18 +10,22 @@
                 Please provide an API key on the settings page.
             </p>
         </div>
-
-            <div collection-repeat="project in viewModel.projects"
-                 collection-item-width="'50%'"
-                 collection-item-height="'130px'"
-                 ng-click="viewModel.clickProject(project)">
-                <div class="item text-center wrap item-wrap project-item">
-                    <i ng-if="project.repository_provider == 'github'" class="icon ion-social-github positive"></i>
-                    <h2>
-                        {{project.repository_name}}
-                    </h2>
-                </div>
+        <div ng-if="viewModel.projects && viewModel.projects.length < 1">
+            <p class="light-weight instructions">
+                No Projects
+            </p>
+        </div>
+        <div collection-repeat="project in viewModel.projects"
+             collection-item-width="'50%'"
+             collection-item-height="'130px'"
+             ng-click="viewModel.clickProject(project)">
+            <div class="item text-center wrap item-wrap project-item">
+                <i ng-if="project.repository_provider == 'github'" class="icon ion-social-github positive"></i>
+                <h2>
+                    {{project.repository_name}}
+                </h2>
             </div>
+        </div>
     </ion-content>
 </ion-view>
 
