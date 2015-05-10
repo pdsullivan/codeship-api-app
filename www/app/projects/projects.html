@@ -15,17 +15,21 @@
                 No Projects
             </p>
         </div>
-        <div collection-repeat="project in viewModel.projects"
-             collection-item-width="'50%'"
-             collection-item-height="'130px'"
-             ng-click="viewModel.clickProject(project)">
-            <div class="item text-center wrap item-wrap project-item">
-                <i ng-if="project.repository_provider == 'github'" class="icon ion-social-github positive"></i>
-                <h2>
-                    {{project.repository_name}}
-                </h2>
+        <ion-list>
+            <div collection-repeat="project in viewModel.projects"
+                 class=""
+                 collection-item-width="'50%'"
+                 collection-item-height="'130px'">
+                <ion-item ng-click="viewModel.clickProject(project)" class="item text-center wrap item-wrap project-item">
+                    <i ng-if="project.repository_provider == 'github'"
+                       style="font-size: 40px;"
+                       class="icon ion-social-github positive"></i>
+                    <h2>
+                        {{project.repository_name}}
+                    </h2>
+                </ion-item>
             </div>
-        </div>
+        </ion-list>
     </ion-content>
 </ion-view>
 

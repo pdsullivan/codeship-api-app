@@ -36,7 +36,6 @@
             $http(req)
                 .success(function(data){
                     //success
-                    $log.info('getUser', data);
                     defer.resolve(data);
                 })
                 .error(function(error){
