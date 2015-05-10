@@ -1,6 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/pdsullivan/codeship-api-app.png?label=ready&title=Ready)](http://waffle.io/pdsullivan/codeship-api-app)
 
-# Codeship Api App (working title, lol)
+# Codeship Console
 
 App to call the codeship api to check build status and other goodness. Going to pull in some github functionality for the repos that are being used with codeship as well. I will just see where this goes, and hope to move quickly and submit to app store and get into google plat in a few days at most.
 
