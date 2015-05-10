@@ -29,7 +29,13 @@
             restartBuild: restartBuild
         };
 
-        var baseUrl = 'https://codeship.com/';
+        var baseUrl = '';
+        if (document.location.hostname == "localhost") {
+            baseUrl = 'http://localhost:8100/api/';
+        } else {
+            baseUrl = 'https://codeship.com/';
+        }
+
         return service;
 
         function getProjects() {
@@ -89,7 +95,6 @@
             $http(req)
                 .success(function(data){
                     //success
-                    $log.info('getProjects success', data);
                     defer.resolve(data);
                 })
                 .error(function(error){

@@ -1,4 +1,8 @@
 <ion-view title="Project" ng-controller="projectDetailController as viewModel">
+
+    <ion-nav-buttons side="right">
+        <button  class="button button-icon icon ion-ios-upload-outline" ng-click="viewModel.optionsClick()"></button>
+    </ion-nav-buttons>
     <ion-content class="has-header build-content"  has-bouncing="true">
         <ion-refresher
                 pulling-text="Pull to refresh..."
@@ -7,28 +11,43 @@
         </ion-refresher>
         <div class="padding text-center">
             <h3 class="positive">
-                <i ng-if="viewModel.project.repository_provider == 'github'" class="icon ion-social-github"></i> {{viewModel.project.repository_name}}
+                {{viewModel.project.repository_name}}
             </h3>
         </div>
-        <div class="list">
+        <ion-list class="list">
             <div class="card build-item"
                  ng-click="viewModel.clickBuild($event,build)"
                  ng-class="viewModel.getBuildItemClass(build)"
-                 ng-repeat="build in viewModel.project.builds">
-                <div class="item item-thumbnail-left ">
-                    <img ng-src="{{build.githubUser.avatar_url}}">
-                    <p>
-                        <span class="dark">{{build.githubUser.login}}</span>
-                        <br/>
-                        <span class="dark">{{build.message}}</span>
-                    </p>
+                 ng-repeat="build in viewModel.getBuilds()">
+                <ion-item class="item item-thumbnail-left ">
+                    <img ng-src="{{viewModel.getGithubUser(build.github_username).avatar_url}}" class="github-avatar">
                     <p>
                         <span class="octicon octicon-git-branch"></span> <span class="dark">{{build.branch}}</span>
                     </p>
-                    <span class="badge status-badge" ng-class="viewModel.badgeClass(build)">
-                         {{build.status}}
+                    <p>
+                        <span class="dark">{{viewModel.getGithubUser(build.github_username).login}}</span>
+                        <br/>
+                        <span class="dark">{{build.message}}</span>
+                    </p>
+                    <p style="text-decoration: underline;" ng-click="viewModel.commitClicked(build)">
+                        <span class="octicon octicon-git-commit"></span> <span class="dark">{{build.commit_id | limitTo:8}}</span>
+                    </p>
+                    <span ng-if="build.status != 'testing'" class="badge status-badge" ng-class="viewModel.badgeClass(build)">
+                         {{build.status | uppercase}}
                     </span>
-                </div>
+                    <span ng-if="build.status == 'testing'"
+                          class="badge status-badge"
+                          style="top: 56px !important;"
+                          ng-class="viewModel.badgeClass(build)">
+                        <ion-spinner class="build-status" icon="android"></ion-spinner>
+                    </span>
+                    <ion-option-button  ng-class="build.status != 'testing' ? 'button-positive' : 'button-positive disabled'"
+                                        class="button-positive"
+                                        style="font-size: 15px;white-space: normal;line-height: 16px;"
+                                        ng-click="viewModel.restartBuild(build)">
+                        Restart<br/>Build
+                    </ion-option-button>
+                </ion-item>
                 <div class="item ">
                     <p class="dark">
                         {{viewModel.getDateString(build)}}
@@ -37,23 +56,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </ion-list>
     </ion-content>
-
-    <script id="build-popover.html" type="text/ng-template">
-        <ion-popover-view>
-            <ion-header-bar>
-                <h1 class="title">Build</h1>
-            </ion-header-bar>
-            <ion-content>
-                <div class="padding text-center">
-                    <button class="button button-positive button-outline"
-                            ng-click="restartBuildFromDetail()">
-                        <i class="icon ion-ios-refresh-empty"></i> Restart Build
-                    </button>
-                </div>
-            </ion-content>
-        </ion-popover-view>
-    </script>
 </ion-view>
 

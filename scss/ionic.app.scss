@@ -107,3 +107,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   border: none;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
+
+.build-status.spinner svg {
+  width: 28px;
+  height: 28px;
+  stroke: white;
+  fill: white;
+}
+
+img.github-avatar {
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: $positive;
+}
