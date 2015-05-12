@@ -1,6 +1,3 @@
-/**
- * Created by Shipt
- */
 
 (function () {
     'use strict';
