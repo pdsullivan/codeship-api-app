@@ -22,8 +22,15 @@
             loadData()
         };
 
+        viewModel.getProjects = function() {
+          return viewModel.projects;
+        };
+        
         function loadData() {
             viewModel.apiKey = localStorageService.getApiKey();
+            if(viewModel.apiKey == null) {
+              setTimeout(watchBuilds, 1000);
+            }
             projectService.getProjects()
                 .then(function(data){
                     viewModel.projects = data.projects;
@@ -40,5 +47,3 @@
 
     }
 })();
-
-

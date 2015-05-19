@@ -52,11 +52,12 @@
                     <p class="dark">
                         {{viewModel.getDateString(build)}}
                         <br/>
-                        <i class="icon ion-ios-clock-outline"></i> Completed in {{viewModel.getBuildTime(build) | number:2}} minutes
+                        <span ng-if="build.status == 'success' || build.status == 'error'" >
+                          <i class="icon ion-ios-clock-outline"></i> Completed in {{viewModel.getBuildTime(build)}}
+                        </span>
                     </p>
                 </div>
             </div>
         </ion-list>
     </ion-content>
 </ion-view>
-

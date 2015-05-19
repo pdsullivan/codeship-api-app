@@ -16,7 +16,7 @@
             </p>
         </div>
         <ion-list>
-            <div collection-repeat="project in viewModel.projects"
+            <div collection-repeat="project in viewModel.getProjects()"
                  class=""
                  collection-item-width="'50%'"
                  collection-item-height="'130px'">
@@ -32,4 +32,3 @@
         </ion-list>
     </ion-content>
 </ion-view>
-
