@@ -1,5 +1,10 @@
 module.exports = {
-  proxies: null,
+  proxies: [
+    {
+      path: "/api",
+      proxyUrl: "https://codeship.com/"
+    }
+  ],
 
   paths: {
     html : {

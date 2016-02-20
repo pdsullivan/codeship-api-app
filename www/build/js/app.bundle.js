@@ -3199,11 +3199,11 @@
 	        this.initializeApp();
 	        // set our app's pages
 	        this.pages = [
-	            { title: 'Hello Ionic', component: hello_ionic_1.HelloIonicPage },
-	            { title: 'My First List', component: list_1.ListPage }
+	            { title: 'Projects', component: list_1.ListPage },
+	            { title: 'Settings', component: hello_ionic_1.HelloIonicPage }
 	        ];
 	        // make HelloIonicPage the root (or first) page
-	        this.rootPage = hello_ionic_1.HelloIonicPage;
+	        this.rootPage = list_1.ListPage;
 	    }
 	    MyApp.prototype.initializeApp = function () {
 	        this.platform.ready().then(function () {
@@ -62161,9 +62161,10 @@
 	var ionic_1 = __webpack_require__(5);
 	var HelloIonicPage = (function () {
 	    function HelloIonicPage() {
+	        this.apiKey = JSON.parse(localStorage.getItem("api-key"));
 	    }
 	    HelloIonicPage.prototype.save = function (key) {
-	        console.log('asdklf', key);
+	        localStorage.setItem("api-key", JSON.stringify(this.apiKey));
 	    };
 	    HelloIonicPage = __decorate([
 	        ionic_1.Page({
@@ -62203,9 +62204,17 @@
 	        this.nav = nav;
 	        // If we navigated to this page, we will have an item available as a nav param
 	        this.selectedItem = navParams.get('item');
-	        http.get('https://swapi.co/api/people')
+	        this.apiKey = JSON.parse(localStorage.getItem("api-key"));
+	        var baseUrl = "";
+	        if (document.location.hostname == "localhost") {
+	            baseUrl = 'http://localhost:8100/api/';
+	        }
+	        else {
+	            baseUrl = 'https://codeship.com/';
+	        }
+	        http.get(baseUrl + '/api/v1/projects.json?api_key=' + this.apiKey)
 	            .map(function (res) { return res.json(); })
-	            .subscribe(function (people) { return _this.people = people.results; });
+	            .subscribe(function (projects) { return _this.projects = projects.projects; });
 	        //
 	        // this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
 	        // 'american-football', 'boat', 'bluetooth', 'build'];

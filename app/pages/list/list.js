@@ -15,12 +15,19 @@ export class ListPage {
 
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
-    http.get('https://swapi.co/api/people')
+    this.apiKey = JSON.parse( localStorage.getItem("api-key"));
+    var baseUrl = "";
+    if (document.location.hostname == "localhost") {
+        baseUrl = 'http://localhost:8100/api/';
+    } else {
+        baseUrl = 'https://codeship.com/';
+    }
+    http.get(baseUrl + '/api/v1/projects.json?api_key=' + this.apiKey)
       // Call map on the response observable to get the parsed people object
       .map(res => res.json())
       // Subscribe to the observable to get the parsed people object and attach it to the
       // component
-      .subscribe(people => this.people = people.results);
+      .subscribe(projects => this.projects = projects.projects);
     //
     // this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
     // 'american-football', 'boat', 'bluetooth', 'build'];

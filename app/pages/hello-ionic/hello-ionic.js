@@ -6,10 +6,10 @@ import {Page} from 'ionic-framework/ionic';
 })
 export class HelloIonicPage {
   constructor() {
-
+    this.apiKey = JSON.parse( localStorage.getItem("api-key"));
   }
 
   save(key) {
-    console.log('asdklf',key)
+    localStorage.setItem("api-key", JSON.stringify(this.apiKey));
   }
 }

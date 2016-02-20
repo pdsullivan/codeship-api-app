@@ -1,20 +1,21 @@
-<ion-navbar *navbar>
+<ion-navbar light *navbar>
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>My First List</ion-title>
+  <ion-title>Projects</ion-title>
 </ion-navbar>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="#item of people" (click)="itemTapped($event, item)">
-      <!-- <ion-icon name="{{item.icon}}" item-left></ion-icon> -->
+    <spinner></spinner>
+    <button ion-item *ngFor="#item of projects" (click)="itemTapped($event, item)">
+      <ion-icon name="github" item-left></ion-icon>
       <!-- {{item.name}} -->
-      <b *ngIf="item.name">
-        {{item.name}}
+      <b *ngIf="item.repository_name">
+        {{item.repository_name}}
       </b>
-      <div *ngIf="item.gender" class="item-note" item-right>
-        {{item.gender}}
+      <div *ngIf="item.repository_provider" class="item-note" item-right>
+        {{item.repository_provider}}
       </div>
     </button>
   </ion-list>

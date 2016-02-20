@@ -2,11 +2,11 @@
   <button menuToggle *ngIf="!selectedItem">
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>{{selectedItem.name}}</ion-title>
+  <ion-title>Project</ion-title>
 </ion-navbar>
 
 <ion-content>
  <div class="selection">
-    <b *ngIf="selectedItem">{{selectedItem.name}}</b>
+    <b *ngIf="selectedItem">{{selectedItem.repository_name}}</b>
   </div>
 </ion-content>
