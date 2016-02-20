@@ -1,40 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+<html lang="en">
+<head>
+  <title>Ionic</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+  <link ios-href="build/css/app.ios.css" rel="stylesheet">
+  <link md-href="build/css/app.md.css" rel="stylesheet">
+</head>
+<body>
 
-    <script src="lib/moment/moment.js"></script>
+  <ion-app></ion-app>
 
-    <!-- compiled css output -->
-    <link href="css/ionic.app.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="lib/octicons/octicons/octicons.css">
-    <script src="lib/underscore/underscore-min.js"></script>
-
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-
-    <!-- your app's js -->
-    <script src="app/app.js"></script>
-    <script src="app/controllers.js"></script>
-
-
-    <script src="app/services/localStorageService.js"></script>
-    <script src="app/services/projectService.js"></script>
-    <script src="app/services/githubService.js"></script>
-
-    <script src="app/settings/settingsController.js"></script>
-    <script src="app/projects/projectsController.js"></script>
-    <script src="app/projects/projectDetail/projectDetailController.js"></script>
-  </head>
-
-  <body ng-app="app">
-    <ion-nav-view></ion-nav-view>
-  </body>
+  <script src="cordova.js"></script>
+  <script src="build/js/app.bundle.js"></script>
+</body>
 </html>

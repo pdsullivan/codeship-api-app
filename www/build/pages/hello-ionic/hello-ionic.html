@@ -1,0 +1,23 @@
+
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Settings</ion-title>
+</ion-navbar>
+
+
+<ion-content class="getting-started">
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>API Key</ion-label>
+      <ion-input #apiKey type="text"></ion-input>
+    </ion-item>
+    <div padding>
+      <button (click)="save(apiKey.value)" round>Save</button>
+    </div>
+
+  </ion-list>
+
+</ion-content>
