@@ -1,16 +1,13 @@
-<ion-navbar light *navbar>
+<ion-navbar blue *navbar>
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
   <ion-title>Projects</ion-title>
 </ion-navbar>
 
-<ion-content>
+<ion-content class="darker">
   <ion-list>
-    <spinner></spinner>
     <button ion-item *ngFor="#item of projects" (click)="itemTapped($event, item)">
-      <ion-icon name="github" item-left></ion-icon>
-      <!-- {{item.name}} -->
       <b *ngIf="item.repository_name">
         {{item.repository_name}}
       </b>
@@ -19,7 +16,4 @@
       </div>
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    <!-- You navigated here from <b>{{selectedItem.title}}</b> -->
-  </div>
 </ion-content>

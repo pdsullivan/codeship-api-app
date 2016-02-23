@@ -10,3 +10,27 @@
 @import "../pages/hello-ionic/hello-ionic";
 
 @import "../pages/item-details/item-details";
+
+h2 {
+  color:  map-get($colors, dark);
+}
+
+ion-nav-bar {
+  background-color:  map-get($colors, blue);
+}
+
+.darker {
+  background-color: map-get($colors, grey);
+}
+
+.text-center {
+  text-align: center;
+}
+
+p.build-status {
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: map-get($colors, blue);
+  font-size: 1.5rem;
+}

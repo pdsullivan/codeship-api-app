@@ -5,3 +5,6 @@ div.selection {
   padding-top: 5%;
 }
 
+.darker {
+  background-color: map-get($colors, grey);
+}

@@ -21,4 +21,8 @@ export class ItemDetailsPage {
     this.title = "test";
 
   }
+
+  getGithubUser (github_username) {
+    return 'https://secure.gravatar.com/avatar/28c78b9f29304f666166304b636fa09d.png?r=PG&s=92'
+  }
 }
