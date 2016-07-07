@@ -1,0 +1,13 @@
+PODS:
+  - Alamofire (3.4.1)
+  - PMJSON (0.9.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - PMJSON (~> 0.9)
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  PMJSON: 29d0f6e6ff0cfa8e929c2fb29e630fa78a173cc1
+
+COCOAPODS: 0.39.0

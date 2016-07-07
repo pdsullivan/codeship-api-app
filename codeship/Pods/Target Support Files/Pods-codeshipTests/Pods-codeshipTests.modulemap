@@ -1,0 +1,6 @@
+framework module Pods_codeshipTests {
+  umbrella header "Pods-codeshipTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
