@@ -10,6 +10,7 @@ import {Loading} from 'ionic-angular';
 })
 export class HomePage {
     public projects: any;
+    public loading: any;
     constructor(public projectService: ProjectService, private navController: NavController) {
         this.loadPeople();
     }
@@ -19,15 +20,15 @@ export class HomePage {
         this.projectService.load()
             .then(data => {
                 this.projects = data;
+                this.loading.dismiss();
             });
     }
 
     presentLoading() {
-        let loading = Loading.create({
-            content: "Loading...",
-            duration: 1000
+        this.loading = Loading.create({
+            content: "Loading..."
         });
-        // this.navController.present(loading);
+        this.navController.present(this.loading);
     }
 
     clickProject(project) {

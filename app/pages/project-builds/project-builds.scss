@@ -1,17 +1,19 @@
 .project-builds-page {
-    a.commit-id {
+    ion-content {
+        background-color: color($colors, stable);
+    }
+    p.commit-id {
         white-space: nowrap;
         overflow: hidden;
         display: block;
-        max-width: 50%;
+        max-width: 80%;
         text-overflow: ellipsis;
-        text-decoration:underline;
     }
     ion-card {
         position: relative;
         build-status-badge {
             position: absolute;
-            bottom: 0px;
+            bottom: 44px;
             right: 0px;
             margin: 10px;
             border-radius: 9px;
@@ -20,8 +22,9 @@
             color: color($colors, dark);
             background-color: color($colors, stable);
             &.testing {
-                color: color($colors, white);
-                background-color: color($colors, primary);
+                color: color($colors, primary);
+                //background-color: color($colors, primary);
+                background-color: transparent;
             }
             &.success {
                 color: color($colors, white);
@@ -33,6 +36,10 @@
             }
             &.stopped {
 
+            }
+            ion-spinner svg {
+            //  stroke: color($colors, white);
+            //  fill:  color($colors, white);
             }
         }
     }

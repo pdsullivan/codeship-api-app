@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {NavParams} from 'ionic-angular';
 import {GithubService} from '../../providers/github-service/github-service';
+import {CapitalizePipe} from '../../pipes/capitalize-pipe';
 
 @Component({
     templateUrl: 'build/pages/project-builds/project-builds.html',
-    providers: [GithubService]
+    providers: [GithubService],
+    pipes: [CapitalizePipe]
 })
 export class ProjectBuildsPage {
 
