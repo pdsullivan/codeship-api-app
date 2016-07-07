@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Projects</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+    <ion-list>
+        <ion-item (click)="clickProject(project)" *ngFor="#project of projects">
+            <ion-icon item-left *ngIf="project.repository_provider == 'github'" name="logo-github"></ion-icon>
+            <h2>{{project.repository_name}}</h2>
+            <p>{{project.repository_provider}}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

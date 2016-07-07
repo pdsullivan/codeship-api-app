@@ -7,30 +7,15 @@
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
 
-@import "../pages/hello-ionic/hello-ionic";
+@import "../pages/about/about";
 
-@import "../pages/item-details/item-details";
+@import "../pages/contact/contact";
 
-h2 {
-  color:  map-get($colors, dark);
-}
+@import "../pages/home/home";
 
-ion-nav-bar {
-  background-color:  map-get($colors, blue);
-}
+@import "../pages/project-builds/project-builds";
 
-.darker {
-  background-color: map-get($colors, grey);
-}
 
-.text-center {
-  text-align: center;
-}
-
-p.build-status {
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: map-get($colors, blue);
-  font-size: 1.5rem;
+.toolbar[primary] .toolbar-background {
+    border-color: transparent;
 }

@@ -7,20 +7,17 @@
 @import "app.variables";
 
 
-// App iOS Variables
+// App Windows Variables
 // --------------------------------------------------
-// iOS only Sass variables can go here
+// Windows only Sass variables can go here
 
 
-// Ionic iOS Sass
+// Ionic Windows Sass
 // --------------------------------------------------
 // Custom App variables must be declared before importing Ionic.
 // Ionic will use its default values when a custom variable isn't provided.
-@import "ionic.ios";
+@import "ionic.wp";
 
-.toolbar-title {
-    font-weight: 400;
-}
 
 // App Shared Sass
 // --------------------------------------------------
@@ -29,6 +26,6 @@
 @import "app.core";
 
 
-// App iOS Only Sass
+// App Windows Only Sass
 // --------------------------------------------------
-// CSS that should only apply to the iOS app
+// CSS that should only apply to the Windows app

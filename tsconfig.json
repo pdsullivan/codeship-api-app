@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
-    "allowNonTsExtensions": true,
-    "isolatedModules": true,
     "target": "es5",
     "module": "commonjs",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },
-  "exclude": [
-    "node_modules"
+  "filesGlob": [
+    "**/*.ts",
+    "!node_modules/**/*"
   ],
-  "compileOnSave": false
+  "exclude": [
+    "node_modules",
+    "typings/global",
+    "typings/global.d.ts"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }

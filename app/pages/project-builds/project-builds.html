@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Project</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card build-card *ngFor="#build of project.builds">
+        <build-status-badge class="{{build.status}}">
+            {{build.status}}
+        </build-status-badge>
+        <ion-item>
+            <ion-avatar item-left>
+            <img [src]="getUserImageUrl(build.github_username)">
+            </ion-avatar>
+            <h3>
+                <ion-icon name="git-branch"></ion-icon> {{build.branch}}
+            </h3>
+            <p>{{build.message}}</p>
+        </ion-item>
+        <ion-card-content>
+            <p><ion-icon name="github"></ion-icon> {{build.github_username}}</p>
+            <a class="commit-id">
+                <ion-icon name="git-commit"></ion-icon>{{build.commit_id}}
+            </a>
+            <p><ion-icon name="timer"></ion-icon> {{build.started_at | date}}</p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
