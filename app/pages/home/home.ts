@@ -12,10 +12,10 @@ export class HomePage {
     public projects: any;
     public loading: any;
     constructor(public projectService: ProjectService, private navController: NavController) {
-        this.loadPeople();
+        this.loadProjects();
     }
 
-    loadPeople(){
+    loadProjects(){
         this.presentLoading();
         this.projectService.load()
             .then(data => {
@@ -34,5 +34,6 @@ export class HomePage {
     clickProject(project) {
         console.log(`click project`)
         this.navController.push(ProjectBuildsPage, {project: project});
+        this.projectService.loadProject(project)
     }
 }

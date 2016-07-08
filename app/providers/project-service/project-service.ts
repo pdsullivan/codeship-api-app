@@ -24,11 +24,25 @@ export class ProjectService {
         this.codeshipApiKey = "cc0628f21b6f01f2b66e7cfc03f1422004583f6cff60df773867ce7af695";
     }
 
+    loadProject(project){
+
+        // don't have the data yet
+        return new Promise(resolve => {
+            // We're using Angular Http provider to request the data,
+            // then on the response it'll map the JSON data to a parsed JS object.
+            // Next we process the data and resolve the promise with the new data.
+            this.http.get(`${this.baseUrl}/api/v1/projects/${project.id}.json?api_key=${this.codeshipApiKey}&page=2`)
+                .map(res => res.json())
+                .subscribe(data => {
+                    // we've got back the raw data, now generate the core schedule data
+                    // and save the data for later reference
+                    this.data = data;
+                    resolve(this.data.projects);
+                });
+        });
+    }
+
     load() {
-        if (this.data) {
-            // already loaded data
-            return Promise.resolve(this.data);
-        }
 
         // don't have the data yet
         return new Promise(resolve => {
