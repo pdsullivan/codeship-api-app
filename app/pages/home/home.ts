@@ -32,7 +32,6 @@ export class HomePage {
     }
 
     clickProject(project) {
-        console.log(`click project`)
         this.navController.push(ProjectBuildsPage, {project: project});
         this.projectService.loadProject(project)
     }

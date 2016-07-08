@@ -12,9 +12,10 @@ export class MyApp {
 
   constructor(private platform:Platform) {
       this.rootPage = TabsPage;
-    // ionicBootstrap(this.rootPage, [], {
-    //   tabbarPlacement: 'top'
-    // });
+    ionicBootstrap(this.rootPage, [], {
+        //   tabbarPlacement: 'top'
+      // mode: 'md'
+    });
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
