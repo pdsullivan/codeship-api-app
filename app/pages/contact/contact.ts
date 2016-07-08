@@ -5,6 +5,12 @@ import {NavController} from 'ionic-angular';
   templateUrl: 'build/pages/contact/contact.html'
 })
 export class ContactPage {
-  constructor(private navController: NavController) {
-  }
+    public apiKey: any;
+    constructor(private navController: NavController) {
+        this.apiKey = localStorage.getItem('codeshipApiKey');
+    }
+
+    saveApiKey(){
+        localStorage.setItem('codeshipApiKey',this.apiKey);
+    }
 }

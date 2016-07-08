@@ -2,12 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the ProjectService provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
 export class ProjectService {
     data: any;
@@ -21,39 +15,40 @@ export class ProjectService {
         } else {
             this.baseUrl = 'https://codeship.com/';
         }
-        this.codeshipApiKey = "cc0628f21b6f01f2b66e7cfc03f1422004583f6cff60df773867ce7af695";
+        this.codeshipApiKey = localStorage.getItem('codeshipApiKey');
     }
 
     loadProject(project){
-
-        // don't have the data yet
+        this.codeshipApiKey = localStorage.getItem('codeshipApiKey');
         return new Promise(resolve => {
-            // We're using Angular Http provider to request the data,
-            // then on the response it'll map the JSON data to a parsed JS object.
-            // Next we process the data and resolve the promise with the new data.
-            this.http.get(`${this.baseUrl}/api/v1/projects/${project.id}.json?api_key=${this.codeshipApiKey}&page=2`)
+            this.http.get(`${this.baseUrl}/api/v1/projects/${project.id}.json?api_key=${this.codeshipApiKey}`)
                 .map(res => res.json())
                 .subscribe(data => {
-                    // we've got back the raw data, now generate the core schedule data
-                    // and save the data for later reference
                     this.data = data;
                     resolve(this.data.projects);
                 });
         });
     }
 
-    load() {
-
-        // don't have the data yet
+    restartBuild(build) {
+        this.codeshipApiKey = localStorage.getItem('codeshipApiKey');
         return new Promise(resolve => {
-            // We're using Angular Http provider to request the data,
-            // then on the response it'll map the JSON data to a parsed JS object.
-            // Next we process the data and resolve the promise with the new data.
+            this.http.get(`${this.baseUrl}/api/v1/builds/${build.id}/restart.json?api_key=${this.codeshipApiKey}`)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.data = data;
+                    resolve(this.data);
+                });
+        });
+
+    }
+
+    load() {
+        this.codeshipApiKey = localStorage.getItem('codeshipApiKey');
+        return new Promise(resolve => {
             this.http.get(`${this.baseUrl}/api/v1/projects.json?api_key=${this.codeshipApiKey}`)
                 .map(res => res.json())
                 .subscribe(data => {
-                    // we've got back the raw data, now generate the core schedule data
-                    // and save the data for later reference
                     this.data = data;
                     resolve(this.data.projects);
                 });

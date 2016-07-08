@@ -33,6 +33,9 @@ export class HomePage {
 
     clickProject(project) {
         this.navController.push(ProjectBuildsPage, {project: project});
-        this.projectService.loadProject(project)
+    }
+
+    ionViewWillEnter() {
+        this.loadProjects();
     }
 }

@@ -30,17 +30,17 @@
         </ion-card-content>
         <ion-row no-padding>
             <ion-col>
-                <button clear small primary>
+                <button (click)="clickOpenCommit(build)" clear small primary>
                     <ion-icon name='share-alt'></ion-icon>
                     Commit
                 </button>
             </ion-col>
-            <ion-col text-center>
-                <button clear small primary [disabled]="build.status == 'testing' || build.status == 'waiting'">
+            <!-- <ion-col text-center>
+                <button (click)="restartBuildClick(build)" clear small primary [disabled]="build.status == 'testing' || build.status == 'waiting'">
                     <ion-icon name='refresh'></ion-icon>
                     Restart Build
                 </button>
-            </ion-col>
+            </ion-col> -->
         </ion-row>
     </ion-card>
 </ion-content>

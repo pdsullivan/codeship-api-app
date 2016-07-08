@@ -16,8 +16,12 @@
 
         <ion-item>
             <ion-label stacked>API Key</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input [(ngModel)]="apiKey" type="text"></ion-input>
         </ion-item>
 
+
     </ion-list>
+    <div padding>
+        <button primary round (click)="saveApiKey()">Save</button>
+    </div>
 </ion-content>
