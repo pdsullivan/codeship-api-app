@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD0C5C721D35D2DE002D27A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C5C711D35D2DE002D27A8 /* AppDelegate.swift */; };
+		CD0C5C741D35D2DE002D27A8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C5C731D35D2DE002D27A8 /* FirstViewController.swift */; };
+		CD0C5C761D35D2DE002D27A8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C5C751D35D2DE002D27A8 /* SecondViewController.swift */; };
+		CD0C5C791D35D2DE002D27A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0C5C771D35D2DE002D27A8 /* Main.storyboard */; };
+		CD0C5C7B1D35D2DE002D27A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0C5C7A1D35D2DE002D27A8 /* Assets.xcassets */; };
+		CD0C5C7E1D35D2DE002D27A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0C5C7C1D35D2DE002D27A8 /* LaunchScreen.storyboard */; };
+		CD0C5C891D35D2DE002D27A8 /* codeshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C5C881D35D2DE002D27A8 /* codeshipTests.swift */; };
+		CD0C5C941D35D2DE002D27A8 /* codeshipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0C5C931D35D2DE002D27A8 /* codeshipUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD0C5C851D35D2DE002D27A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0C5C661D35D2DE002D27A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD0C5C6D1D35D2DE002D27A8;
+			remoteInfo = codeship;
+		};
+		CD0C5C901D35D2DE002D27A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0C5C661D35D2DE002D27A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD0C5C6D1D35D2DE002D27A8;
+			remoteInfo = codeship;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD0C5C6E1D35D2DE002D27A8 /* codeship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codeship.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0C5C711D35D2DE002D27A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD0C5C731D35D2DE002D27A8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		CD0C5C751D35D2DE002D27A8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CD0C5C781D35D2DE002D27A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD0C5C7A1D35D2DE002D27A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD0C5C7D1D35D2DE002D27A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD0C5C7F1D35D2DE002D27A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0C5C841D35D2DE002D27A8 /* codeshipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = codeshipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0C5C881D35D2DE002D27A8 /* codeshipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeshipTests.swift; sourceTree = "<group>"; };
+		CD0C5C8A1D35D2DE002D27A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0C5C8F1D35D2DE002D27A8 /* codeshipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = codeshipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0C5C931D35D2DE002D27A8 /* codeshipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeshipUITests.swift; sourceTree = "<group>"; };
+		CD0C5C951D35D2DE002D27A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD0C5C6B1D35D2DE002D27A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C5C811D35D2DE002D27A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C5C8C1D35D2DE002D27A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD0C5C651D35D2DE002D27A8 = {
+			isa = PBXGroup;
+			children = (
+				CD0C5C701D35D2DE002D27A8 /* codeship */,
+				CD0C5C871D35D2DE002D27A8 /* codeshipTests */,
+				CD0C5C921D35D2DE002D27A8 /* codeshipUITests */,
+				CD0C5C6F1D35D2DE002D27A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD0C5C6F1D35D2DE002D27A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD0C5C6E1D35D2DE002D27A8 /* codeship.app */,
+				CD0C5C841D35D2DE002D27A8 /* codeshipTests.xctest */,
+				CD0C5C8F1D35D2DE002D27A8 /* codeshipUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD0C5C701D35D2DE002D27A8 /* codeship */ = {
+			isa = PBXGroup;
+			children = (
+				CD0C5C711D35D2DE002D27A8 /* AppDelegate.swift */,
+				CD0C5C731D35D2DE002D27A8 /* FirstViewController.swift */,
+				CD0C5C751D35D2DE002D27A8 /* SecondViewController.swift */,
+				CD0C5C771D35D2DE002D27A8 /* Main.storyboard */,
+				CD0C5C7A1D35D2DE002D27A8 /* Assets.xcassets */,
+				CD0C5C7C1D35D2DE002D27A8 /* LaunchScreen.storyboard */,
+				CD0C5C7F1D35D2DE002D27A8 /* Info.plist */,
+			);
+			path = codeship;
+			sourceTree = "<group>";
+		};
+		CD0C5C871D35D2DE002D27A8 /* codeshipTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0C5C881D35D2DE002D27A8 /* codeshipTests.swift */,
+				CD0C5C8A1D35D2DE002D27A8 /* Info.plist */,
+			);
+			path = codeshipTests;
+			sourceTree = "<group>";
+		};
+		CD0C5C921D35D2DE002D27A8 /* codeshipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0C5C931D35D2DE002D27A8 /* codeshipUITests.swift */,
+				CD0C5C951D35D2DE002D27A8 /* Info.plist */,
+			);
+			path = codeshipUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD0C5C6D1D35D2DE002D27A8 /* codeship */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0C5C981D35D2DE002D27A8 /* Build configuration list for PBXNativeTarget "codeship" */;
+			buildPhases = (
+				CD0C5C6A1D35D2DE002D27A8 /* Sources */,
+				CD0C5C6B1D35D2DE002D27A8 /* Frameworks */,
+				CD0C5C6C1D35D2DE002D27A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = codeship;
+			productName = codeship;
+			productReference = CD0C5C6E1D35D2DE002D27A8 /* codeship.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD0C5C831D35D2DE002D27A8 /* codeshipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0C5C9B1D35D2DE002D27A8 /* Build configuration list for PBXNativeTarget "codeshipTests" */;
+			buildPhases = (
+				CD0C5C801D35D2DE002D27A8 /* Sources */,
+				CD0C5C811D35D2DE002D27A8 /* Frameworks */,
+				CD0C5C821D35D2DE002D27A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD0C5C861D35D2DE002D27A8 /* PBXTargetDependency */,
+			);
+			name = codeshipTests;
+			productName = codeshipTests;
+			productReference = CD0C5C841D35D2DE002D27A8 /* codeshipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD0C5C8E1D35D2DE002D27A8 /* codeshipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0C5C9E1D35D2DE002D27A8 /* Build configuration list for PBXNativeTarget "codeshipUITests" */;
+			buildPhases = (
+				CD0C5C8B1D35D2DE002D27A8 /* Sources */,
+				CD0C5C8C1D35D2DE002D27A8 /* Frameworks */,
+				CD0C5C8D1D35D2DE002D27A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD0C5C911D35D2DE002D27A8 /* PBXTargetDependency */,
+			);
+			name = codeshipUITests;
+			productName = codeshipUITests;
+			productReference = CD0C5C8F1D35D2DE002D27A8 /* codeshipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD0C5C661D35D2DE002D27A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = pdsullivan;
+				TargetAttributes = {
+					CD0C5C6D1D35D2DE002D27A8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					CD0C5C831D35D2DE002D27A8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = CD0C5C6D1D35D2DE002D27A8;
+					};
+					CD0C5C8E1D35D2DE002D27A8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = CD0C5C6D1D35D2DE002D27A8;
+					};
+				};
+			};
+			buildConfigurationList = CD0C5C691D35D2DE002D27A8 /* Build configuration list for PBXProject "codeship" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD0C5C651D35D2DE002D27A8;
+			productRefGroup = CD0C5C6F1D35D2DE002D27A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD0C5C6D1D35D2DE002D27A8 /* codeship */,
+				CD0C5C831D35D2DE002D27A8 /* codeshipTests */,
+				CD0C5C8E1D35D2DE002D27A8 /* codeshipUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD0C5C6C1D35D2DE002D27A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0C5C7E1D35D2DE002D27A8 /* LaunchScreen.storyboard in Resources */,
+				CD0C5C7B1D35D2DE002D27A8 /* Assets.xcassets in Resources */,
+				CD0C5C791D35D2DE002D27A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C5C821D35D2DE002D27A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C5C8D1D35D2DE002D27A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD0C5C6A1D35D2DE002D27A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0C5C761D35D2DE002D27A8 /* SecondViewController.swift in Sources */,
+				CD0C5C721D35D2DE002D27A8 /* AppDelegate.swift in Sources */,
+				CD0C5C741D35D2DE002D27A8 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C5C801D35D2DE002D27A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0C5C891D35D2DE002D27A8 /* codeshipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0C5C8B1D35D2DE002D27A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0C5C941D35D2DE002D27A8 /* codeshipUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD0C5C861D35D2DE002D27A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD0C5C6D1D35D2DE002D27A8 /* codeship */;
+			targetProxy = CD0C5C851D35D2DE002D27A8 /* PBXContainerItemProxy */;
+		};
+		CD0C5C911D35D2DE002D27A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD0C5C6D1D35D2DE002D27A8 /* codeship */;
+			targetProxy = CD0C5C901D35D2DE002D27A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD0C5C771D35D2DE002D27A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD0C5C781D35D2DE002D27A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD0C5C7C1D35D2DE002D27A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD0C5C7D1D35D2DE002D27A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD0C5C961D35D2DE002D27A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD0C5C971D35D2DE002D27A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD0C5C991D35D2DE002D27A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = codeship/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pdsullivan.codeship;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD0C5C9A1D35D2DE002D27A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = codeship/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pdsullivan.codeship;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD0C5C9C1D35D2DE002D27A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = codeshipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pdsullivan.codeshipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/codeship.app/codeship";
+			};
+			name = Debug;
+		};
+		CD0C5C9D1D35D2DE002D27A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = codeshipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pdsullivan.codeshipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/codeship.app/codeship";
+			};
+			name = Release;
+		};
+		CD0C5C9F1D35D2DE002D27A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = codeshipUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pdsullivan.codeshipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = codeship;
+			};
+			name = Debug;
+		};
+		CD0C5CA01D35D2DE002D27A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = codeshipUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pdsullivan.codeshipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = codeship;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD0C5C691D35D2DE002D27A8 /* Build configuration list for PBXProject "codeship" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0C5C961D35D2DE002D27A8 /* Debug */,
+				CD0C5C971D35D2DE002D27A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD0C5C981D35D2DE002D27A8 /* Build configuration list for PBXNativeTarget "codeship" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0C5C991D35D2DE002D27A8 /* Debug */,
+				CD0C5C9A1D35D2DE002D27A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD0C5C9B1D35D2DE002D27A8 /* Build configuration list for PBXNativeTarget "codeshipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0C5C9C1D35D2DE002D27A8 /* Debug */,
+				CD0C5C9D1D35D2DE002D27A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD0C5C9E1D35D2DE002D27A8 /* Build configuration list for PBXNativeTarget "codeshipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0C5C9F1D35D2DE002D27A8 /* Debug */,
+				CD0C5CA01D35D2DE002D27A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD0C5C661D35D2DE002D27A8 /* Project object */;
+}
