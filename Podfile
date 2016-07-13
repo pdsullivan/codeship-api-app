@@ -4,17 +4,7 @@
 use_frameworks!
 
 target 'codeship' do
-    pod 'Alamofire'
+    pod 'Alamofire', '~> 3.4.1'
     pod 'PMJSON', '~> 0.9'
+    pod 'SwiftyJSON'
 end
-
-target 'codeshipTests' do
-    pod 'Alamofire'
-    pod 'PMJSON', '~> 0.9'
-end
-
-target 'codeshipUITests' do
-    pod 'Alamofire'
-    pod 'PMJSON', '~> 0.9'
-end
-
