@@ -10,7 +10,7 @@ class FirstViewController: UITableViewController {
     
     
     @IBOutlet var projectTable: UITableView!
-    let apiKey = ""
+    let apiKey = "cc0628f21b6f01f2b66e7cfc03f1422004583f6cff60df773867ce7af695"
     var projects = Array<Project>()
     var selectedProject: Project?
     
@@ -54,24 +54,22 @@ class FirstViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.projectTable.dequeueReusableCellWithIdentifier("projectCell")! as UITableViewCell
-        
-        cell.textLabel?.text = self.projects[indexPath.row].repositoryName
-        cell.detailTextLabel?.text = self.projects[indexPath.row].repositoryProvider
-        
+        let cell = self.projectTable.dequeueReusableCellWithIdentifier("ProjectTableViewCell") as! ProjectTableViewCell
+        cell.lblName?.text = self.projects[indexPath.row].repositoryName
+        cell.lblType?.text = self.projects[indexPath.row].repositoryProvider
         return cell
     }
     
     func loadProjects() {
-        if(self.projects.count > 0){
-            self.projects = Array<Project>()
-            self.projectTable.reloadData()    
-        }
         Alamofire.request(.GET, "https://codeship.com/api/v1/projects.json", parameters: ["api_key": apiKey])
             .responseJSON { response in
                 switch response.result {
                 case .Success(let data):
                     var json = JSON(data)
+                    if(self.projects.count > 0){
+                        self.projects = Array<Project>()
+                        self.projectTable.reloadData()    
+                    }
                     for (_, subJson) in json["projects"] {
                         let repository_name = subJson["repository_name"].string
                         let repository_provider = subJson["repository_provider"].string

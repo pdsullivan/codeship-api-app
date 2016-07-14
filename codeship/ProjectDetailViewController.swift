@@ -23,9 +23,9 @@ class ProjectDetailViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.buildsTable.dequeueReusableCellWithIdentifier("buildCell")! as UITableViewCell
-        cell.textLabel?.text = self.selectedProject!.builds[indexPath.row].branch
-        cell.detailTextLabel?.text = "Status: " + self.selectedProject!.builds[indexPath.row].status
+        let cell = self.buildsTable.dequeueReusableCellWithIdentifier("buildCell") as! BuildTableViewCell
+        cell.lblBranch?.text = self.selectedProject!.builds[indexPath.row].branch
+        cell.lblStatus?.text = self.selectedProject!.builds[indexPath.row].status
         return cell
     }
     
