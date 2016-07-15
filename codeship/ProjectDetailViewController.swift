@@ -1,6 +1,8 @@
 
 import UIKit
 
+import SwiftIconFont
+
 class ProjectDetailViewController: UITableViewController {
     
     var selectedProject: Project?
@@ -26,6 +28,19 @@ class ProjectDetailViewController: UITableViewController {
         let cell = self.buildsTable.dequeueReusableCellWithIdentifier("buildCell") as! BuildTableViewCell
         cell.lblBranch?.text = self.selectedProject!.builds[indexPath.row].branch
         cell.lblStatus?.text = self.selectedProject!.builds[indexPath.row].status
+        cell.lblMessage?.text = self.selectedProject!.builds[indexPath.row].message
+        cell.lblUsername?.text = self.selectedProject!.builds[indexPath.row].githubUsername
+        cell.testingSpinner.hidden = true
+        if self.selectedProject!.builds[indexPath.row].status == "testing" {
+            cell.testingSpinner.startAnimating()
+            cell.lblStatus.hidden = true
+        } else {
+            cell.testingSpinner.stopAnimating()
+        }
+        
+        cell.userIcon.parseIcon()
+        cell.branchIcon.parseIcon()
+        cell.setColors()
         return cell
     }
     

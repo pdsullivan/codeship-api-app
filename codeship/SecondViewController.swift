@@ -1,23 +1,24 @@
-//
-//  SecondViewController.swift
-//  codeship
-//
-//  Created by Patrick Sullivan on 7/12/16.
-//  Copyright © 2016 pdsullivan. All rights reserved.
-//
-
 import UIKit
 
 class SecondViewController: UIViewController {
 
+    
+    @IBOutlet weak var txtKey: UITextField!
+    var api = CodeshipApi()
+    
+    @IBOutlet weak var btnSave: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        txtKey.text = api.key
+//        btnSave.layer.cornerRadius = 0.5 * btnSave.bounds.size.width
     }
 
+    @IBAction func btnSaveClick(sender: AnyObject) {
+        api.key = txtKey.text
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

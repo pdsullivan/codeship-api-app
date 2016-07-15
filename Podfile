@@ -7,4 +7,5 @@ target 'codeship' do
     pod 'Alamofire', '~> 3.4.1'
     pod 'PMJSON', '~> 0.9'
     pod 'SwiftyJSON'
+    pod 'SwiftIconFont'
 end
