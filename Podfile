@@ -8,4 +8,5 @@ target 'codeship' do
     pod 'PMJSON', '~> 0.9'
     pod 'SwiftyJSON'
     pod 'SwiftIconFont'
+    pod 'SwiftMoment'
 end
