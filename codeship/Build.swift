@@ -1,11 +1,9 @@
-
-
 import Foundation
-
 import SwiftyJSON
 import SwiftMoment
 
 class Build {
+    
     let id: NSNumber
     var message: String!
     var buildMinutes: String!

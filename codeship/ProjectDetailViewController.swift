@@ -1,13 +1,12 @@
-
 import UIKit
-
 import SwiftIconFont
 
 class ProjectDetailViewController: UITableViewController {
 
+    @IBOutlet var buildsTable: UITableView!
+    
     var selectedProject: Project?
 
-    @IBOutlet var buildsTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = self.selectedProject!.repositoryName
