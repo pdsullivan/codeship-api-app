@@ -32,8 +32,8 @@ class Build {
             endMoment = now
         }
         let diff = endMoment.intervalSince(start)
-        let wholeMinutes = Double(round(1*diff.minutes)/1)
-        return String(format:"%f", wholeMinutes)
+        let y = Double(round(1*diff.minutes)/1) as NSNumber
+        return String(y)
     }
 
     func startMoment() -> Moment {
